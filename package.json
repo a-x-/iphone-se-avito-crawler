@@ -1,0 +1,14 @@
+{
+  "name": "avito-api",
+  "version": "0.0.1",
+  "description": "avito api",
+  "main": "index.js",
+  "author": "invntrm",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "parse5": "^2.2.3",
+    "table-builder": "^0.1.5",
+    "throw": "^1.1.0"
+  }
+}
