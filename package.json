@@ -16,5 +16,7 @@
     "table-builder": "^0.1.5",
     "throw": "^1.1.0",
     "urijs": "^1.18.3"
-  }
+  },
+  "bin": {"avito-iphone-crawler": "./bin/crawl"},
+  "scripts": {"crawl": "./bin/crawl --html-table --page-count 5 > iphones.html && open iphones.html"}
 }
