@@ -6,9 +6,15 @@
   "author": "invntrm",
   "license": "MIT",
   "dependencies": {
+    "asyncawait": "^1.0.6",
     "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^9.8.3",
+    "leftpad": "^0.0.0",
+    "meow": "^3.7.0",
     "parse5": "^2.2.3",
+    "ramda": "^0.22.1",
     "table-builder": "^0.1.5",
-    "throw": "^1.1.0"
+    "throw": "^1.1.0",
+    "urijs": "^1.18.3"
   }
 }
