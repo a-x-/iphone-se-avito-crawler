@@ -48,7 +48,7 @@ const processData = data => data
     .map(i => (merge(i, {price: +i.price.replace(/\s+|руб\./g, '')})))
     .filter(i => i.title.match(/se/i))
     .map(i => i.title.match(/A1723/i) ? merge(i, {a1723:true}) : i)
-    .map(i => merge(i, {title: i.title.replace(/(iPhone|Apple|айфон)\s?/ig, '')}))
+    .map(i => merge(i, {title: i.title.replace(/(iPhone|Apple|айфон|Продам|Продаю)\s?/ig, '')}))
     .filter(i => !i.title.match(/\b(6|7|5S|Samsung|7plus|6plus)\b/ig))
     .sort((i, j) => i.price < j.price ? 1 : -1)
     .map(i => merge(i, {mem: +(i.title.match(/64|32|16/) || [NaN])[0]}))
