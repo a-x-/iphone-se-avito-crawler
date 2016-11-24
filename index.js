@@ -16,7 +16,7 @@ const getopt = require('meow')
       --page-count, -n  Count of the pages to crawl
     `)
     opts.uri = opts.input
-    const uri = getopt.uri || 'https://www.avito.ru/moskva/telefony/iphone?bt=1&q=iphone+se'
+    const uri = opts.uri || 'https://www.avito.ru/moskva/telefony/iphone?bt=1&q=iphone+se'
         const getPageUri = page => `${uri}&p=${page}`
     const isHtmlTable = opts.flags.htmlTable
 const TableBuilder = require('table-builder')
