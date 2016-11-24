@@ -15,7 +15,7 @@ const getopt = require('meow')
       --html-table, -t  Output html table representation
       --page-count, -n  Count of the pages to crawl
     `)
-    opts.uri = opts.input
+    opts.uri = opts.input[0]
     const uri = opts.uri || 'https://www.avito.ru/moskva/telefony/iphone?bt=1&q=iphone+se'
         const getPageUri = page => `${uri}&p=${page}`
     const isHtmlTable = opts.flags.htmlTable
@@ -57,7 +57,7 @@ const processData = data => data
     .map(i => merge(i, {uri: i.uri.match(/^(https?:)?\/\//) ? i.uri : 'https:' + hostname(i.uri, hostname(uri))}))
 
 const htmlOutput = data => {
-    const style = `<style>body{text-align:center;}.avito{width:100%;}thead{text-align:left;}.price-td{text-align:right;}</style>`
+    const style = `<style>body{text-align:center;}.avito{display:inline-table;}.price-td{padding-right:1em;}</style>`
     return style + htmlTable(data)
 }
 
