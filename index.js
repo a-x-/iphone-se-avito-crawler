@@ -62,7 +62,7 @@ const htmlOutput = data => {
 }
 
 const main = () =>
-    Promise.all(range1(opts.flags.pageCount).map(i => getHttp(getPageUri(i)).then(parseHtml).then(retreiveData)))
+    Promise.all(range1(opts.flags.pageCount || 5).map(i => getHttp(getPageUri(i)).then(parseHtml).then(retreiveData)))
     .then(dataArr => unnest(dataArr))
     .then(processData)
     .then(data => isHtmlTable ? htmlOutput(data) : JSON.stringify(data, null, 4))
