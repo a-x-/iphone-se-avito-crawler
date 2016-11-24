@@ -58,7 +58,7 @@ const processData = data => data
 
 const htmlOutput = data => {
     const style = `<style>body{text-align:center;}.avito{width:100%;}thead{text-align:left;}.price-td{text-align:right;}</style>`
-    return htmlTable(data)
+    return style + htmlTable(data)
 }
 
 const main = () =>
